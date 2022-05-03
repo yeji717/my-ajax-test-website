@@ -15,10 +15,7 @@
     nightDayHandler(this);
   ">
   <ol>
-    <li><a onclick="fetchPage('html.txt')">HTML</a></li>
-    <li><a onclick="fetchPage('css.txt')
- ">CSS</a></li>
-    <li><a onclick="fetchPage('javascript.txt')">JavaScript</a></li>
+    
   </ol>
   <article></article>
   <script>
@@ -29,6 +26,17 @@
         })
       });
     }
+    if(location.hash){
+      fetchPage(location.hash.substr(2));
+    } else{
+      fetchPage('welcome');
+    }
+
+    fetch('list.txt').then(function(response){
+      response.text().then(function(text){
+        document.querySelector('#nav').innerHTML = text;
+      })
+    });
   </script>
 </body>
 </html>

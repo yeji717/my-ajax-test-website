@@ -1,0 +1,3 @@
+<li><a href="#!html"onclick="fetchPage('html.txt')">HTML</a></li>
+<li><a href="#!css"onclick="fetchPage('css.txt')">CSS</a></li>
+<li><a href="#!javascript"onclick="fetchPage('javascript.txt')">JavaScript</a></li>
